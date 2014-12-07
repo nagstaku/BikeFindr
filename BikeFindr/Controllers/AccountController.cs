@@ -149,7 +149,7 @@ namespace BikeFindr.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid && false) // TODO: REMOVE && FALSE so REGISTRATIO WILL WORK
+            if (ModelState.IsValid && true) // TODO: REMOVE && FALSE so REGISTRATIO WILL WORK
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
