@@ -29,5 +29,7 @@ namespace BikeFindr.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BikeFindr.Models.Ping> Pings { get; set; }
     }
 }
