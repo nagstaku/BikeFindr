@@ -50,6 +50,10 @@ namespace BikeFindr.Controllers
         {
             if (ModelState.IsValid)
             {
+                ping.PingDateTime = DateTime.Now;
+                ping.BikeFindrID = "78:4b:87:ab:92:ed";
+                ping.PingX = Convert.ToDecimal("45.52");
+                ping.PingY = Convert.ToDecimal("-122.6819");
                 db.Pings.Add(ping);
                 db.SaveChanges();
                 return RedirectToAction("Index");
